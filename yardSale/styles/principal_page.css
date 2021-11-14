@@ -1,0 +1,88 @@
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --very-ligh-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd9b2;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cards-container {
+    display: grid;
+    /* el parametro "auto-fill" lo que hace es rellenar de columnas las veces que sea necesario sin importar el tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fill, 24rem);
+    gap: 2.6rem;
+    place-content: center;
+}
+
+.product-card {
+    width: 24rem;
+}
+
+.product-card img {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.product-info figure {
+    margin: 0;
+}
+
+.product-info figure img {
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    color: var(--very-ligh-pink);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 14rem);
+        gap: 2.6rem;
+    }
+
+    .product-card {
+        width: 14rem;
+    }
+
+    .product-card img {
+        width: 14rem;
+        height: 14rem;
+    }
+
+
+}
